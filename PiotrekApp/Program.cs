@@ -11,7 +11,7 @@ var config = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddUserSecrets<Program>()
     .AddJsonFile("appsettings.json", reloadOnChange: true, optional: false)
-    .AddJsonFile("appsettings.dev.json", reloadOnChange: true, optional: true)
+    .AddJsonFile("appsettings.development.json", reloadOnChange: true, optional: true)
     .Build();
 
 var slackConfig = config.Get<AppSettings>();
